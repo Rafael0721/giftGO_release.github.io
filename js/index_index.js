@@ -8,3 +8,12 @@ submitBtn.addEventListener("click", function(){
     alert("Please enter the correct password");
   }
 });
+
+// enter key
+window.addEventListener("keydown", function(e){
+  switch(e.keyCode){
+    case 13:
+      submitBtn.click();
+      break;
+  }
+});
