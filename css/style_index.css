@@ -1,0 +1,79 @@
+@font-face{
+    font-family: "gotham bold";
+    src: url('font/Gotham-Bold.otf'),
+    url('font/Gotham-Bold.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham light";
+    src: url('font/Gotham-Light.otf'),
+    url('font/Gotham-Light.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham book";
+    src: url('font/Gotham-Book.otf'),
+    url('font/Gotham-Book.otf'); /* IE */
+}
+
+.password-box{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  margin-bottom: 20px;
+}
+
+.input-group{
+  width: 30% !important;
+}
+
+.input-group-prepend{
+  height: 25pt !important;
+}
+
+.input-group-text{
+  font-family: gotham book !important;
+  border-bottom-left-radius: 99em !important;
+  border-top-left-radius: 99em !important;
+}
+
+.form-control{
+  height: 25pt !important;
+  font-family: gotham book !important;
+  border-bottom-right-radius: 99em !important;
+  border-top-right-radius: 99em !important;
+  overflow-y: hidden;
+}
+
+.submit-button{
+  color: #000;
+  line-height: 1;
+  margin-top: 25px;
+  font-size: 12pt;
+  padding: 3px 7px;
+  border-style: solid;
+  border-color: #000;
+  border-radius: 99em;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.submit-button:hover{
+  color: #666;
+  border-color: #666;
+  transform: scale(1.1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.link-button{
+  display: none;
+}

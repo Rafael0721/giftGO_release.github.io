@@ -1,0 +1,1120 @@
+@font-face{
+    font-family: "gotham bold";
+    src: url('font/Gotham-Bold.otf'),
+    url('font/Gotham-Bold.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham light";
+    src: url('font/Gotham-Light.otf'),
+    url('font/Gotham-Light.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham book";
+    src: url('font/Gotham-Book.otf'),
+    url('font/Gotham-Book.otf'); /* IE */
+}
+
+
+body{
+  /* overflow-x: hidden; 可以消除側邊的空白區域 */
+  overflow-x: hidden;
+  /* user-select: none; 讓使用者無法反白 */
+  user-select: none;
+}
+
+body a{
+  text-decoration: none !important;
+}
+
+.white-cover{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 4;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.white-cover-hidden{
+  opacity: 0;
+}
+
+.white-cover-dis{
+  display: none;
+}
+
+.navRow{
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  transition: all .3s ease-in-out;
+}
+
+.navRow-background{
+  background: #f6f5f1;
+}
+
+.navRow-content{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+}
+
+.titleIcon{
+  /* position: absolute; */
+  /* margin-top: 10px; */
+  display: inline-block;
+  /* z-index: 1; */
+  width: 200px;
+  height: 80px;
+}
+
+.naviBtn-set{
+  display: inline-block;
+  margin-top: 20px;
+  float: right;
+}
+
+.naviBtn{
+  margin-left: 25px;
+  /* margin-top: -5px; */
+  /* border-radius: 50px; */
+  padding: 2px 0 2px 0;
+  font-family: gotham bold;
+  cursor: pointer;
+  color: black;
+}
+
+.naviBtn:hover{
+  transform: scale(1.2);
+  color: #666;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.buildBtn{
+  border-radius: 99em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 3px 10px;
+}
+
+a.linkText-border{
+  border-radius: 99em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 3px 10px;
+}
+
+a.linkText, .linkText-border{
+  text-decoration: none;
+  color: black;
+}
+
+a.linkText:hover{
+  color: #666;
+  border-color: #666;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.modal{
+  font-family: gotham book;
+}
+
+.modal-sub-left{
+  width: 47.5%;
+  float: left;
+}
+.modal-sub-right{
+  width: 47.5%;
+  float: right;
+}
+
+.modal-selection{
+  clear: both;
+  text-align: center;
+}
+
+.modal-selection-item{
+  display: inline-block;
+}
+.modal-selection-item:nth-child(1){
+  float: left;
+}
+.modal-selection-item:nth-child(3){
+  float: right;
+}
+
+.input-group-text{
+  border-bottom-left-radius: 99em !important;
+  border-top-left-radius: 99em !important;
+}
+
+.form-control{
+  border-bottom-right-radius: 99em !important;
+  border-top-right-radius: 99em !important;
+}
+
+.selection-circle, .selection-circle-pressed{
+  display: inline-block;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 99em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #1c51a8;
+  margin-right: 5px;
+}
+
+.selection-circle-pressed{
+  background: #1c51a8;
+}
+
+.fileBtn{
+  background: white;
+  margin: 0 5px;
+  padding: 3px 10px;
+  font-family: gotham book;
+  font-size: 12pt;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.fileBtn:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px #999;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.importBtn{
+  float: left;
+  color: #1c51a8;
+  border-color: #1c51a8;
+}
+
+.bg-video-block{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-wrap{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 1;
+  /* box-shadow設在這層才能保證在intro-區域的上面 */
+  /* box-shadow: 0 0 25px #999; */
+}
+
+.slogan-block{
+  /* position: absolute; */
+  z-index: 2;
+  width: 90%;
+  text-align: center;
+  /* height: 60vh; */
+  margin: 0% 5%;
+  /* left: 50%; */
+
+  /* Viewport units for CSS */
+  /* 1vw = 1% of viewport width, 1vh = 1% of viewport height */
+  /* 28.125 = 9 / 16 / 2 * % */
+  /* top: 18.75vw; */
+  /* top: 40vh; */
+}
+
+.central-slogan{
+  /* white-space: nowrap; 可以強制文字都在同一排，所以-50%left的時候才能準確抓到整行的長度 */
+  /* white-space: nowrap; */
+  font-size: 40pt;
+  font-family: gotham light;
+  line-height: 1;
+  margin-bottom: 0px;
+  cursor: default;
+  /* margin-left: -50%; */
+}
+
+.slogan-show{
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.slogan-hidden{
+  opacity: 0;
+  /* position: absolute; */
+  transition: opacity 0.4s ease;
+}
+
+.slogan-sink{
+  position: absolute;
+  z-index: -1;
+}
+
+.central-sub-slogan{
+  font-size: 14pt;
+  font-family: gotham light;
+  line-height: 1;
+  margin-top: 5vh;
+  margin-bottom: 0px;
+  cursor: default;
+  /* margin-left: -50%; */
+}
+
+.central-start{
+  /* text-align: center; */
+  text-align: left;
+  font-family: gotham bold;
+  color: black;
+  /* margin-top: 10vh; */
+  margin-top: 2rem;
+}
+
+.arrow-block{
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: 50%;
+  width: 7rem;
+  height: 100%;
+  transform: translate3d(-50%, 0px, 0px);
+  pointer-events: none;
+}
+
+.arrow{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 7rem;
+  height: 3.5rem;
+  border-radius: 99em 99em 0% 0%;
+  background: #fff;
+  transform: translate3d(0px, 100%, 0px);
+  opacity: 0;
+  pointer-events: all;
+  transition: all .30s ease-in;
+  cursor: default;
+}
+
+.arrow::after{
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: translate3d(-50%, 50%, 0px) rotate(45deg);
+}
+
+.arrow-show{
+  opacity: 1;
+  box-shadow: 0 0 25px #999;
+  transform: translate3d(0px, 0%, 0px);
+}
+
+.topImg-block{
+  width: 100%;
+  height: 100vh;
+}
+
+.top-img{
+  opacity: .7;
+  box-shadow: 0 0 25px #999;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-abs{
+  position: absolute;
+  transition: opacity 0.8s ease;
+}
+
+.top-hidden{
+  opacity: 0;
+}
+
+.img-real{
+  transition: opacity 0.8s ease;
+}
+
+.intro-back{
+  position: absolute;
+  width: 100%;
+  /* height: auto; */
+  height: 33vw;
+  background: url(../img/intro/middle_img_explode.jpg) center center no-repeat;
+  -moz- background-size: cover;
+  background-size: cover;
+  z-index: -2;
+  background-position: top;
+  opacity: 1;
+}
+
+.intro-white{
+  position: absolute;
+  width: 100%;
+  /* height: auto; */
+  height: 33vw;
+  background: url(../img/intro/middle_img.jpg) center center no-repeat;
+  -moz- background-size: cover;
+  background-size: cover;
+  /* z-index: -2; */
+  background-position: top;
+  z-index: -1;
+  opacity: 1;
+}
+
+.intro-white-trans{
+  position: absolute;
+  width: 100%;
+  height: 33vw;
+  background: url(../img/intro/middle_img.jpg) center center no-repeat;
+  -moz- background-size: cover;
+  background-size: cover;
+  /* z-index: -2; */
+  background-position: top;
+  z-index: -1;
+  opacity: 0;
+  transition:  all .40s ease-in;
+}
+
+.intro-block{
+  width: 100%;
+  height: 33vw;
+  background: url(../img/intro/middle_img.jpg) center center no-repeat;
+  -moz- background-size: cover;
+  background-size: cover;
+  /* z-index: -2; */
+  background-position: top;
+}
+
+.intro-block:hover{
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+  /* background 不支持transition漸變功能 又因這層有文字不能讓整層透明化 故多做一層 intro-white*/
+}
+
+.intro-text{
+  width: 90%;
+  /* height: 100%; */
+
+  margin: 0 5%;
+  text-align: left;
+  font-family: gotham light;
+  cursor: default;
+}
+
+.title-size{
+  cursor: default;
+  font-size: 28pt;
+}
+
+.content-size{
+  font-size: 14pt;
+}
+
+.intro-title{
+  font-family: gotham book;
+  margin-bottom: 0;
+  line-height: 3;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.intro-title-moved{
+  opacity: 0;
+  transform: translateX(-30px) translateY(0);
+}
+
+.intro-content-block{
+  width: 60%;
+  text-align: justify;
+  transition: all 1s ease-in-out;
+}
+
+.up-down-block-moved{
+  opacity: 0;
+  transform: translateX(0) translateY(30px);
+}
+
+.intro-content-main{
+  line-height: 2;
+  font-family: gotham book;
+  margin-bottom: 1rem;
+}
+
+.intro-content{
+  line-height: 2;
+  margin-bottom: 0;
+}
+
+.renderSpace{
+  width: auto;
+  height: 300px;
+}
+
+.middle-1{
+  position: absolute;
+  /* top: 55.5vw; */
+  opacity: 1;
+  z-index: -2;
+  transition:  all .30s ease-in;
+}
+
+.middle-1:hover{
+  opacity: 0;
+}
+
+.middle-2{
+  position: absolute;
+  /* top: 55.5vw; */
+  z-index: -1;
+  opacity: 0;
+  transition:  all .30s ease-in;
+}
+
+.middle-2:hover{
+  opacity: 1;
+}
+
+.function-block{
+  width: 100%;
+  height: 33vw;
+}
+
+.function-left-block{
+  width: 31.5%;
+  height: 100%;
+  display: inline-block;
+  margin-left: 5%;
+  /* background: #333; */
+}
+
+.function-right-block{
+  position: relative;
+  width: 58%;
+  height: inherit;
+  float: right;
+  display: inline-block;
+  margin-right: 5%;
+  text-align: right;
+  font-family: gotham light;
+  cursor: default;
+  /* background: #666; */
+}
+
+.function-title-moved{
+  opacity: 0;
+  transform: translateX(30px) translateY(0);
+}
+
+.function-content-block{
+  /* opacity: 1; */
+  transition: all 1s ease-in-out;
+}
+
+/* .function-content-block-moved{
+  opacity: 0;
+  transform: translateX(0) translateY(30px);
+} */
+
+.function-content{
+  text-align: justify;
+}
+
+.circle-block{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* 此處必須有display: flex; 才能使用align-items: center; */
+  align-items: center;
+  /* justify-content: center; */
+  /* background: black; */
+}
+
+.big-circle{
+  position: relative;
+  /* 此處的position必須為relative，子div裡的元素absolute之後的left:50%才會是這個空間中的50% */
+  /* border-style: dashed;
+  border-width: 1px;
+  border-color: #000;
+  border-radius: 50%; */
+  width: 300px;
+  height: 300px;
+  margin-left: 25px;
+}
+
+.big-circle-img{
+  position: absolute;
+  /* width: 300px;
+  height: 300px; */
+}
+
+.big-circle-img:hover{
+  /* width: 310px;
+  height: 310px;
+  margin-left: -5px;
+  margin-top: -5px; */
+  transform: scale(1.05);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.circle-icon-block{
+  position: absolute;
+  left: 50%;
+}
+
+.circle-icon{
+  width: 80px;
+  height: 80px;
+  /* 175px = 300px/2 + 25px */
+  transform-origin: 50% 175px 0px;
+  margin-top: -25px;
+  margin-left: -50%;
+}
+
+.circle-icon:hover{
+  width: 90px;
+  height: 90px;
+  transform-origin: 50% 180px 0px;
+  margin-top: -30px;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.circle-icon-animate{
+  animation: spin 5s infinite linear
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.floating-bricks-block{
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0px;
+  text-align: right;
+  /* background: black; */
+}
+
+/* .floating-brick{
+  width: 100%;
+  height: 40%; */
+  /* background: white; */
+  /* position: absolute;
+  bottom: 0px;
+  text-align: left;
+} */
+
+.floating-brick-img{
+  width: 15.5%;
+  height: auto;
+}
+
+.floating-brick-img:hover{
+  transform: scale(1.1);
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.floating-animation1{
+  animation: move 4s infinite ease-in-out;
+}
+.floating-animation2{
+  animation: move 4s infinite ease-in-out;
+  animation-delay:.8s;
+}
+.floating-animation3{
+  animation: move 4s infinite ease-in-out;
+  animation-delay:.5s;
+}
+.floating-animation4{
+  animation: move 4s infinite ease-in-out;
+  animation-delay:1s;
+}
+.floating-animation5{
+  animation: move 4s infinite ease-in-out;
+  animation-delay:.3s;
+}
+.floating-animation6{
+  animation: move 4s infinite ease-in-out;
+  animation-delay:.7s;
+}
+
+@keyframes move {
+  0%   {transform: translate(0px, 0px);}
+  50%  {transform: translate(0px, 20px);}
+  100% {transform: translate(0px, 0px);}
+  /* to {
+    transform: translate(0px, 10px);;
+  } */
+}
+
+.scrolling-block1, .scrolling-block2{
+  /* 加了position: relative;以後 滾動時背景就不再跳動了 */
+  position: relative;
+  width: 100%;
+  min-height: 33vw;
+  cursor: default;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* transform: translateZ(-2px) scale(3); //变慢三倍 */
+
+  font-family: gotham book;
+}
+
+.scrolling-block1{
+  background-image: url('../img/intro/effect_2.jpg');
+}
+
+.scrolling-block2{
+  background-image: url('../img/intro/effect_3.jpg');
+}
+
+.scrolling-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrolling-content{
+  width: 90%;
+  margin: 0 5%;
+  text-align: center;
+}
+
+/* .gallery-block{
+  width: 100%;
+  height: 60vw;
+  box-shadow: 0 0 25px #999;
+} */
+
+.gallery-block{
+  cursor: default;
+  width: 90%;
+  margin: 0 5%;
+  font-family: gotham light;
+}
+
+.gallery-img-block{
+  width: 100%;
+  /* 45vw 為整體 60vw 的75% */
+  height: 45vw;
+  /* background: #666; */
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.gallery-img-zone-upper{
+  /* background: #333; */
+  width: 100%;
+  height: 50%;
+}
+
+.gallery-img-zone-lower{
+  /* background: #999; */
+  width: 100%;
+  height: 50%;
+}
+
+.gallery-img-zone-side, .gallery-img-zone-center{
+  height: 100%;
+  cursor: default;
+  /* 父元素有position:relative 子元素設absolute的時候的 100% 才會是父元素的100% */
+  position: relative;
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+
+.gallery-img-zone-side{
+  width: 33%;
+}
+.gallery-img-zone-center{
+  width: 34%;
+}
+
+.gallery-img-hide{
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.gallery-img{
+  width: 100%;
+  height: 100%;
+  transition: all .4s ease-out;
+}
+
+.gallery-img-cover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  background: #000;
+  transition: opacity .4s ease-out;
+}
+
+.gallery-img-word{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+  transform: scale(1.2);
+  font-family: gotham book;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .4s ease-out;
+}
+
+.gallery-img-zone-side:hover .gallery-img{
+  transform: scale(1.2);
+}
+.gallery-img-zone-center:hover .gallery-img{
+  transform: scale(1.2);
+}
+
+.gallery-img-zone-side:hover .gallery-img-word{
+  opacity: 1;
+  transform: scale(1);
+}
+.gallery-img-zone-center:hover .gallery-img-word{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery-img-zone-side:hover .gallery-img-cover{
+  opacity: .3;
+}
+.gallery-img-zone-center:hover .gallery-img-cover{
+  opacity: .3;
+}
+
+.bottom-block{
+  position: relative;
+  width: 90%;
+  height: 50.625vw;
+  margin: 10vh 5% 10vh 5%;
+  transition: all 1s ease-in-out;
+
+  /* 單純放圖 */
+  background-image: url("../img/intro/try_img_2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px #999;
+  /* background-attachment: fixed; */
+}
+
+/* .bottom-bg-img{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+} */
+
+.bottom-bg-content{
+  position: absolute;
+  font-family: gotham book;
+  left: 10%;
+  top: 20%;
+}
+
+.bottom-slogan{
+  margin-bottom: 0px;
+  line-height: 1;
+}
+
+.bottom-bar{
+  width: 100%;
+  height: 150px;
+  background: #f6f5f1;
+}
+
+.bottom-content-block{
+  width: 90%;
+  height: 100%;
+  margin: 0 5%;
+}
+
+.bottom-content{
+  display: inline-block;
+  width: 50%;
+  height: inherit;
+  float: left;
+  font-family: gotham light;
+  font-size: 12pt;
+}
+
+.bottom-left{
+  text-align: left;
+  padding-top: 65px;
+}
+
+.bottom-right{
+  text-align: right;
+  padding-top: 65px;
+}
+
+.contact-icon{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+
+/*responsive for smaller screen*/
+@media screen and (max-width: 500px){
+  .naviBtn-set{
+    margin-top: 8px;
+  }
+  .titleIcon{
+    width: 120px;
+    height: 48px;
+  }
+  .buildBtn{
+    display: none;
+  }
+  .central-slogan{
+    font-size: 16pt;
+  }
+  .central-sub-slogan{
+    font-size: 8pt;
+  }
+  /* .central-start{
+    display: none;
+  } */
+  .arrow-block{
+    display: none;
+  }
+  .title-size{
+    font-size: 12pt;
+  }
+  .content-size{
+    font-size: 8pt;
+  }
+
+  .scrolling-block1, .scrolling-block2{
+    background-attachment: scroll;
+  }
+
+  .big-circle{
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+  }
+  .circle-icon{
+    width: 30px;
+    height: 30px;
+    transform-origin: 50% 55px 0px;
+    margin-top: -5px;
+  }
+  .circle-icon:hover{
+    width: 40px;
+    height: 40px;
+    transform-origin: 50% 60px 0px;
+    margin-top: -10px;
+  }
+  .floating-brick-img{
+    display: none;
+  }
+  .intro-content{
+    display: none;
+  }
+  .gallery-img-block{
+    /* 90vw 的四分之三(為了保持img的比例) */
+    height: 67.5vw;
+  }
+  /* 將在中間的zone改為display:none 只顯示兩側的zone */
+  .gallery-img-zone-side{
+    width: 50%;
+  }
+  .gallery-img-zone-center{
+    display: none;
+  }
+  .bottom-content{
+    font-size: 8pt;
+  }
+}
+/* extra small */
+@media screen and (min-width: 500px) and (max-width: 768px){
+  .naviBtn-set{
+    margin-top: 10px;
+  }
+  .titleIcon{
+    width: 150px;
+    height: 60px;
+  }
+  .central-slogan{
+    font-size: 20pt;
+  }
+  .central-sub-slogan{
+    font-size: 10pt;
+  }
+  .intro-content{
+    display: none;
+  }
+  /* .central-start{
+    display: none;
+  } */
+  .title-size{
+    font-size: 14pt;
+  }
+  .content-size{
+    font-size: 10pt;
+  }
+  .big-circle{
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+  }
+  .circle-icon{
+    width: 50px;
+    height: 50px;
+    transform-origin: 50% 85px 0px;
+    margin-top: -10px;
+  }
+  .circle-icon:hover{
+    width: 60px;
+    height: 60px;
+    transform-origin: 50% 90px 0px;
+    margin-top: -15px;
+  }
+  .floating-brick-img{
+    width: 15%;
+  }
+  .bottom-content{
+    font-size: 8pt;
+  }
+}
+/* small */
+@media screen and (min-width: 768px) and (max-width: 992px){
+  .naviBtn-set{
+    margin-top: 15px;
+  }
+  .central-slogan{
+    font-size: 24pt;
+  }
+  .central-sub-slogan{
+    font-size: 12pt;
+  }
+  /* .central-start{
+    display: none;
+  } */
+  .title-size{
+    font-size: 16pt;
+  }
+  .content-size{
+    font-size: 12pt;
+  }
+  .big-circle{
+    width: 200px;
+    height: 200px;
+    margin-left: 15px;
+  }
+  .circle-icon{
+    width: 60px;
+    height: 60px;
+    transform-origin: 50% 115px 0px;
+    margin-top: -15px;
+  }
+  .circle-icon:hover{
+    width: 70px;
+    height: 70px;
+    transform-origin: 50% 120px 0px;
+    margin-top: -20px;
+  }
+}
+/* medium */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  .naviBtn-set{
+    margin-top: 15px;
+  }
+  .central-slogan{
+    font-size: 30pt;
+  }
+  .title-size{
+    font-size: 20pt;
+  }
+  .big-circle{
+    width: 250px;
+    height: 250px;
+    margin-left: 20px;
+  }
+  .circle-icon{
+    width: 70px;
+    height: 70px;
+    transform-origin: 50% 145px 0px;
+    margin-top: -20px;
+  }
+  .circle-icon:hover{
+    width: 80px;
+    height: 80px;
+    transform-origin: 50% 150px 0px;
+    margin-top: -25px;
+  }
+}
+
+/* @media screen and (min-width: 1200px){
+
+} */

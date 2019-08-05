@@ -1,0 +1,179 @@
+@font-face{
+    font-family: "gotham bold";
+    src: url('font/Gotham-Bold.otf'),
+    url('font/Gotham-Bold.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham light";
+    src: url('font/Gotham-Light.otf'),
+    url('font/Gotham-Light.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham book";
+    src: url('font/Gotham-Book.otf'),
+    url('font/Gotham-Book.otf'); /* IE */
+}
+
+.titleGroup{
+  position: absolute;
+  z-index: 0;
+  left: 6%;
+  top: 10px;
+  display: inline;
+}
+
+.menuGroup{
+  position: absolute;
+  z-index: 0;
+  right: 6%;
+  display: inline;
+  float: right;
+}
+
+.topMenuIcon{
+  margin: 15px 20px 0 0;
+  cursor: pointer;
+}
+
+.topMenuIcon:hover{
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.mode-dropdown{
+  position: absolute;
+  top: 90px;
+  right: 7%;
+}
+
+.renderSpace{
+  text-align: center;
+}
+
+.loadButton{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.centerBtn{
+  display: inline;
+
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.importBtn{
+  float: left;
+}
+
+.rightBtn{
+  float: right;
+}
+
+.fileBtn{
+  background: white;
+  margin: 0 5px;
+  padding: 3px 10px;
+  color: blue;
+  font-family: gotham book;
+  font-size: 12pt;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: blue;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.fileBtn:hover{
+  margin: 0;
+  padding: 5px 15px;
+  color: blue;
+  font-family: gotham book;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: blue;
+  border-width: 1px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #999;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.mergeBtn{
+  color: green;
+  border-color: green;
+}
+
+.mergeBtn:hover{
+  color: green;
+  border-color: green;
+}
+
+.clearBtn{
+  color: red;
+  border-color: red;
+}
+
+.clearBtn:hover{
+  color: red;
+  border-color: red;
+}
+
+.closeBtn{
+  color: black;
+  border-color: black;
+}
+
+.closeBtn:hover{
+  color: black;
+  border-color: black;
+}
+
+/*only for modal*/
+.modal-font{
+  text-align: left;
+  font-family: gotham book;
+}
+.modalBody-size{
+  font-size: 12pt;
+}
+/*only for modal OVER*/
+
+.counter{
+  bottom: 0;
+}
+
+.countZone{
+  position: absolute;
+  top: 400px;
+  left: 7%;
+}
+
+.blockCountZone{
+  position: absolute;
+  top: 450px;
+  left: 7%;
+}
+
+.countSpace{
+  background: none;
+  width: 100%;
+  font-size: 20pt;
+  font-family: gotham book;
+  cursor: default;
+}

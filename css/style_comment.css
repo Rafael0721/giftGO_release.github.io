@@ -1,0 +1,99 @@
+@font-face{
+    font-family: "gotham bold";
+    src: url('font/Gotham-Bold.otf'),
+    url('font/Gotham-Bold.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham light";
+    src: url('font/Gotham-Light.otf'),
+    url('font/Gotham-Light.otf'); /* IE */
+}
+
+@font-face{
+    font-family: "gotham book";
+    src: url('font/Gotham-Book.otf'),
+    url('font/Gotham-Book.otf'); /* IE */
+}
+
+html, body{
+  overflow-x: hidden;
+  margin: 0px;
+  line-height: 1;
+}
+
+body p{
+  line-height: 1;
+  margin-bottom: 0px !important;
+}
+
+header{
+  text-align: center;
+  font-family: gotham book;
+}
+
+header p:nth-child(1){
+  font-size: 42pt;
+  margin: 5rem 0 !important;
+}
+
+header p:nth-child(2){
+  font-size: 20pt;
+}
+
+header .fa{
+  font-size: 20pt !important;
+  margin: 2rem 10px;
+  color: #999;
+  cursor: pointer;
+}
+
+header .star-hover{
+  color:#1c51a8;
+}
+
+/* header span:hover{
+  color: #1c51a8;
+} */
+
+
+header .checked {
+  color: #1c51a8;
+}
+
+.input-group{
+  width: 90% !important;
+  margin: 30px 5%;
+  font-family: gotham light;
+  font-size: 14pt !important;
+}
+
+.input-group-text{
+  padding: 3rem 0.75rem !important;
+}
+
+form{
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.fileBtn{
+  background: white;
+  margin: 2rem 5px;
+  padding: 3px 10px;
+  font-family: gotham book;
+  font-size: 12pt;
+  border-radius: 50px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+.fileBtn:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px #999;
+  -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.5);
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}

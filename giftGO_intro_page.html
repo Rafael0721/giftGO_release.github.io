@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>giftGO</title>
+    <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style_intro.css" type="text/css">
+    <!-- <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css" type="text/css"> -->
+    <link rel="icon" href="img/intro/web_icon.png" type="image/ico" />
+  </head>
+
+  <body>
+    <!white cover>
+    <div id="cover" class="white-cover"></div>
+
+    <!navBar>
+    <div id="navRow" class="navRow">
+      <div class="navRow-content">
+        <div class="titleIcon">
+          <img class="logoImg" src="img/intro/giftgo_icon_title.png" width="100%" height="100%" unselectable="on">
+        </div>
+        <div class="naviBtn-set">
+          <label class="content-size naviBtn"><a class="linkText" href="https://youtu.be/d-tmckYgxa0" unselectable="on">Inspiration</a></label>
+
+          <!-- <label class="content-size naviBtn buildBtn" data-toggle="modal" data-target="#personalInfo">Build NOW</label> -->
+          <label class="content-size naviBtn"><a class="linkText linkText-border" href="giftGO_make_page.html" unselectable="on">Build NOW</a></label>
+        </div>
+      </div>
+    </div>
+
+    <!central slogan>
+    <!-- <div class="slogan-block">
+
+      <p id="topSlogan1" class="central-slogan slogan-show" unselectable="on">Make a unique gift on the GO!</p>
+      <p id="topSlogan2"class="central-slogan slogan-hidden slogan-sink" unselectable="on">A learning process that is shorter than ever</p>
+      <p id="topSlogan3"class="central-slogan slogan-hidden slogan-sink" unselectable="on">Unique, elegant, tutorial-free!</p>
+
+      <p class="central-sub-slogan" unselectable="on">A great gift makes memories remain the same!</p>
+
+      <div class="central-start"><a class="linkText" href="html_tetris_layout.html" unselectable="on">START</a></div>
+    </div> -->
+
+    <!top img>
+    <!-- <div id="topImg" class="topImg-block">
+      <div class="slogan-block">
+
+        <p id="topSlogan1" class="central-slogan slogan-show" unselectable="on">Make a unique gift on the GO!</p>
+        <p id="topSlogan2"class="central-slogan slogan-hidden slogan-sink" unselectable="on">A learning process that is shorter than ever</p>
+        <p id="topSlogan3"class="central-slogan slogan-hidden slogan-sink" unselectable="on">Unique, elegant, tutorial-free!</p>
+
+        <p class="central-sub-slogan" unselectable="on">A great gift makes memories remain the same!</p>
+
+        <div class="central-start"><a class="linkText" href="html_tetris_layout.html" unselectable="on">START</a></div>
+
+      </div>
+
+      <div class="arrow-action">
+        <div id="arrowSymbol" class="arrow arrow-show"></div>
+      </div>
+
+      <img id="img-2" src="img/intro/effect_2.jpg" class="top-img img-abs top-hidden" unselectable="on">
+      <img id="img-1" src="img/intro/effect_1.jpg" class="top-img img-abs" unselectable="on">
+      <img id="img-3" src="img/intro/effect_3.jpg" class="top-img img-real top-hidden" unselectable="on">
+    </div> -->
+
+    <!bg video / top content>
+    <div class="bg-video-block">
+      <div class="video-wrap">
+        <!-- video標籤一定要加 muted="true" 才能夠在google chrome上面自動播放 -->
+        <video id="bgVid" autoplay="true" loop="true" muted="true"  preload="auto">
+          <source src="vid/web_animation.mp4" type="video/mp4"> The current browser doesn't support this video.</source>
+        </video>
+      </div>
+
+      <!-- 加一層半透明overlay -->
+      <div class="video-overlay"></div>
+
+      <!-- 往下指箭頭 -->
+      <div class="arrow-block">
+        <div id="arrowSymbol" class="arrow arrow-show"></div>
+      </div>
+
+      <!-- slogan區域 -->
+      <div class="slogan-block">
+        <p id="topSlogan1" class="central-slogan slogan-show" unselectable="on">Make a unique gift on the GO!</p>
+        <p id="topSlogan2"class="central-slogan slogan-hidden slogan-sink" unselectable="on">A learning process that is shorter than ever</p>
+        <p id="topSlogan3"class="central-slogan slogan-hidden slogan-sink" unselectable="on">Unique, elegant, tutorial-free!</p>
+
+        <p class="central-sub-slogan" unselectable="on">A great gift makes memories remain the same!</p>
+      </div>
+    </div>
+
+    <!intro text>
+    <!-- 底層背景 -->
+    <div class="intro-back" unselectable="on"></div>
+    <!-- 中層白背景 -->
+    <div id="introTrans" class="intro-white" unselectable="on"></div>
+    <!-- 上層背景 -->
+    <div id="introBlock" class="intro-block">
+      <div class="intro-text" unselectable="on">
+        <p id="introTitle" class="title-size intro-title intro-title-moved" unselectable="on">From Hand-made to Digital-hand-made</p>
+        <div id="introContent" class="content-size intro-content-block up-down-block-moved">
+          <p class="intro-content-main" unselectable="on">No matter who you are, giftGO allows you to design your peerless gifts in 20 minutes!</p>
+          <p class="intro-content" unselectable="on">
+            The goal of giftGO is to help people who do not
+            have engineering background build unique gifts digitally,
+            and print it out physically with 3D printing technology!
+          </p>
+          <!-- <div class="central-start"><a class="linkText" href="html_tetris_layout.html" unselectable="on">START TRYING</a></div> -->
+        </div>
+      </div>
+    </div>
+
+    <!Parallax Scrolling>
+    <!-- first parallax box -->
+    <div class="scrolling-block1">
+      <div class="scrolling-overlay">
+        <div class="scrolling-content">
+          <p class="title-size intro-title" unselectable="on">Simpler than ever!</p>
+          <p class="content-size" unselectable="on">Without complecated 3D concepts, for the first time,
+          you may focus on designing your precious gift.</p>
+        </div>
+      </div>
+    </div>
+
+    <!functions intro>
+    <div id="functionBlock" class="function-block" unselectable="on">
+      <!-- 左半部 / 大圓+小圖 -->
+      <div class="function-left-block" unselectable="on">
+        <div class="circle-block" unselectable="on">
+          <div class="big-circle" unselectable="on">
+            <img class="big-circle-img" src="img/intro/color_circle.png" width="100%" height="100%" unselectable="on">
+
+            <div class="circle-icon-block" unselectable="on">
+              <img id="circleIcon5" class="circle-icon" src="img/intro/type_mode.png" unselectable="on">
+            </div>
+            <div class="circle-icon-block">
+              <img id="circleIcon4" class="circle-icon" src="img/intro/mold_mode.png" unselectable="on">
+            </div>
+            <div class="circle-icon-block">
+              <img id="circleIcon3" class="circle-icon" src="img/intro/tetris_mode.png" unselectable="on">
+            </div>
+            <div class="circle-icon-block">
+              <img id="circleIcon2" class="circle-icon" src="img/intro/voxel_mode.png" unselectable="on">
+            </div>
+            <div class="circle-icon-block">
+              <img id="circleIcon1" class="circle-icon" src="img/intro/photo_mode.png" unselectable="on">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 右半部 -->
+      <div class="function-right-block" unselectable="on">
+        <!-- 漂浮小圖 -->
+        <div class="floating-bricks-block" unselectable="on">
+          <img class="floating-brick-img floating-animation1" src="img/intro/cube_brick_1.png" unselectable="on">
+          <img class="floating-brick-img floating-animation2" src="img/intro/cube_brick_2.png" unselectable="on">
+          <img class="floating-brick-img floating-animation3" src="img/intro/cube_brick_3.png" unselectable="on">
+          <img class="floating-brick-img floating-animation4" src="img/intro/cube_brick_4.png" unselectable="on">
+          <img class="floating-brick-img floating-animation5" src="img/intro/cube_brick_5.png" unselectable="on">
+          <img class="floating-brick-img floating-animation6" src="img/intro/cube_brick_6.png" unselectable="on">
+        </div>
+        <!-- content -->
+        <p id="featureTitle" class="title-size intro-title function-title-moved" unselectable="on">Main features</p>
+        <div id="featureContent" class="content-size function-content-block up-down-block-moved" unselectable="on">
+          <p class="intro-content-main" unselectable="on">3D photo / Voxel manipulation / Tetris patterns / Molding / 3D text</p>
+          <p class="intro-content function-content" unselectable="on">Through the combination of these functions,
+            giftGO allows you to create stunning works in just a few minutes!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!Parallax Scrolling>
+    <!-- second parallax box -->
+    <div class="scrolling-block2">
+      <div class="scrolling-overlay">
+        <div class="scrolling-content">
+          <p class="title-size intro-title" unselectable="on">Imagination is the only limitation!</p>
+          <p class="content-size" unselectable="on">You have an idea? Let's make it the reality!</p>
+        </div>
+      </div>
+    </div>
+
+    <!gallery>
+    <!-- <div id="galleryBlock" class="gallery-block"> -->
+    <!-- title -->
+    <div id="galleryBlock" class="gallery-block">
+      <p id="galleryTitle" class="title-size intro-title intro-title-moved" unselectable="on">Gallery</p>
+
+      <!-- upper row -->
+      <div class="gallery-img-block">
+        <div class="gallery-img-zone-upper">
+          <div id="galleryImg1" class="gallery-img-zone-side gallery-img-hide">
+            <!-- 半透明黑遮罩 --> <!-- hover 後出現的 title --> <!-- img本身 -->
+            <div class="gallery-img-cover"></div>
+            <div class="gallery-img-word title-size">
+              <p unselectable="on">PEN HOLDER</p>
+            </div>
+            <img class="gallery-img" src="img/intro/gallery_1.jpg">
+          </div>
+          <div id="galleryImg2" class="gallery-img-zone-center gallery-img-hide">
+            <div class="gallery-img-cover"></div>
+            <div class="gallery-img-word title-size">
+              <p unselectable="on">FACE PUZZLE</p>
+            </div>
+            <img class="gallery-img" src="img/intro/gallery_2.jpg">
+          </div>
+          <div id="galleryImg3" class="gallery-img-zone-side gallery-img-hide">
+            <div class="gallery-img-cover"></div>
+            <div class="gallery-img-word title-size">
+              <p unselectable="on">PLANT POT</p>
+            </div>
+            <img class="gallery-img" src="img/intro/gallery_3.jpg">
+          </div>
+        </div>
+
+        <!-- lower row -->
+        <div class="gallery-img-zone-lower">
+          <div id="galleryImg4" class="gallery-img-zone-side gallery-img-hide">
+            <div class="gallery-img-cover"></div>
+            <div class="gallery-img-word title-size">
+              <p unselectable="on">HANGERS</p>
+            </div>
+            <img class="gallery-img" src="img/intro/gallery_4.jpg">
+          </div>
+          <div id="galleryImg5" class="gallery-img-zone-center gallery-img-hide">
+            <div class="gallery-img-cover"></div>
+            <div class="gallery-img-word title-size">
+              <p unselectable="on">CASTING</p>
+            </div>
+            <img class="gallery-img" src="img/intro/gallery_5.jpg">
+          </div>
+          <div id="galleryImg6" class="gallery-img-zone-side gallery-img-hide">
+            <div class="gallery-img-cover"></div>
+            <div class="gallery-img-word title-size">
+              <p unselectable="on">VOXELIZATION</p>
+            </div>
+            <img class="gallery-img" src="img/intro/gallery_6.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <!bottom space>
+    <div id="bottomBlock" class="bottom-block up-down-block-moved">
+
+      <!-- 放影片 -->
+      <!-- <iframe style="border-radius: 10px;" width="100%" height="100%"
+        src="https://www.youtube.com/embed/d-tmckYgxa0"
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe> -->
+
+      <!-- 直接放圖 (在bottom-block的background-image) -->
+      <div class="bottom-bg-content">
+        <p class="bottom-slogan title-size" unselectable="on">LET'S DO IT!</p>
+        <!-- <label class="central-start content-size naviBtn buildBtn" style="margin-left:0px;" data-toggle="modal" data-target="#personalInfo">START</label> -->
+        <div class="central-start content-size"><a class="linkText linkText-border" href="giftGO_make_page.html" unselectable="on">START</a></div>
+      </div>
+    </div>
+
+    <!bottom bar>
+    <!-- bottom info -->
+    <div class="bottom-bar">
+      <div class="bottom-content-block">
+        <div class="bottom-content">
+          <div class="bottom-left">
+            <img id="mailPage" class="contact-icon" src="img/intro/mail_dark_icon.png">
+            <p style="display: inline-block;">CONTACT</p>
+          </div>
+        </div>
+        <div class="bottom-content">
+          <p class="bottom-right">© giftGO 2019. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Questionaire Modal -->
+    <form class="" action="/regist" method="post">
+      <div class="modal fade" id="personalInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title modal-font">Few questions before kickstart</h5>
+              <button type="button" onclick="removeTextParameter(event)" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body modal-font modalBody-size">
+              <p class="modal-sub-title">Personal Info:</p>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Name</span>
+                </div>
+                <input id="userName" name="userName" type="text" class="form-control" style="font-family: gotham book; font-size:12pt;" placeholder="Please type in your name" aria-describedby="basic-addon1">
+              </div>
+
+              <div class="inputBox input-margin modal-sub-left">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Age</span>
+                  </div>
+                  <input id="userAge" name="userAge" type="text" class="form-control" style="font-family: gotham book; font-size:12pt;" placeholder="Ex: 10" aria-describedby="basic-addon1">
+                </div>
+              </div>
+              <div class="inputBox input-margin modal-sub-right">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Gender</span>
+                  </div>
+                  <input id="userGender" name="userGender" type="text" class="form-control" style="font-family: gotham book; font-size:12pt;" placeholder="Male/Female" aria-describedby="basic-addon1">
+                </div>
+              </div>
+
+              <p class="modal-sub-title">Experience of CAD tools:</p>
+              <div class="modal-selection">
+                <div class="modal-selection-item">
+                  <div id="modalCircle1" class="selection-circle-pressed"></div>
+                  <span>None</span>
+                </div>
+                <div class="modal-selection-item">
+                  <div id="modalCircle2" class="selection-circle"></div>
+                  <span>Intermediate</span>
+                </div>
+                <div class="modal-selection-item">
+                  <div id="modalCircle3" class="selection-circle"></div>
+                  <span>Advanced</span>
+                </div>
+              </div>
+
+              <!-- <input id="userInfo" name="userInfo" style="display:none;" type="text"> -->
+              <input id="experience" name="experience" style="display:none;" type="text">
+
+
+            </div>
+            <div class="modal-footer">
+              <button id="modalCancel" onclick="removeTextParameter(event)" type="button" class="fileBtn closeBtn" data-dismiss="modal">Close</button>
+
+              <input id="hiddenInput" style="display:none;" type="submit">
+              <label id="submitInfo" class="modal-continue fileBtn importBtn" style="margin-bottom:0 !important;">Submit</label>
+              <!-- <a id="afterSubmit" style="display:none;" href="html_tetris_layout.html"></a> -->
+
+              <!-- <button id="submitInfo" type="button" class="modal-continue fileBtn importBtn">Submit</button> -->
+              <!-- 上面的"modal-footer"已經有justify-content: flex-end;的限制了，所以importBtn所帶有的float:left;不影響元件位置 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script> -->
+    <!-- <script src="bootstrap-4.0.0/dist/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="js/index_intro.js"></script>
+
+    <!-- 3 links for boostrap framework -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
