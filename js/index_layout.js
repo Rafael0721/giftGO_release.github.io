@@ -602,6 +602,29 @@ cube.addEventListener("click", function(){
   }
 });
 
+// testing for better rotation
+function moveMesh(mesh, distance, vector){
+  switch(vector){
+    case '+X':
+      mesh.translateX(distance);
+      break;
+    case '-X':
+      mesh.translateX(-distance);
+      break;
+    case '+Y':
+      mesh.translateY(distance);
+      break;
+    case '-Y':
+      mesh.translateY(-distance);
+      break;
+    case '+Z':
+      mesh.translateZ(distance);
+      break;
+    case '-Z':
+      mesh.translateZ(-distance);
+      break;
+  }
+}
 var controlObj = {
   front: '-Z',
   back: '+Z',
@@ -630,7 +653,7 @@ seven.addEventListener("click", function(){
       mesh[ini] = new THREE.Mesh(geometry, mat);
       geometry.name = "seven";
 
-      geometry.control = Object.assign({}, controlObj);
+      // geometry.control = $.extend(true, {}, controlObj);
 
       mesh[ini].scale.set(1, 1, 1);
       findThePeak(geometry);
@@ -3526,22 +3549,24 @@ window.addEventListener("keydown", function(e){
       case 39:  // right
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateX(5);
+          // moveMesh(selectedMesh, 5, selectedMesh.geometry.control.right);
         }
         else{
           selectedMesh.translateX(10);
+          // moveMesh(selectedMesh, 10, selectedMesh.geometry.control.right);
           // if(selectedMesh.children[0]){
           //   selectedMesh.children[0].translateX(10);
           // }
         }
-        // console.log(hidden[0]);
-        // console.log(selectedMesh.children[0]);
         break;
       case 37:  // left
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateX(-5);
+          // moveMesh(selectedMesh, 5, selectedMesh.geometry.control.left);
         }
         else{
           selectedMesh.translateX(-10);
+          // moveMesh(selectedMesh, 10, selectedMesh.geometry.control.left);
           // if(selectedMesh.children[0]){
           //   selectedMesh.children[0].translateX(-10);
           // }
@@ -3550,9 +3575,11 @@ window.addEventListener("keydown", function(e){
       case 38:  // front
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateZ(-5);
+          // moveMesh(selectedMesh, 5, selectedMesh.geometry.control.front);
         }
         else{
           selectedMesh.translateZ(-10);
+          // moveMesh(selectedMesh, 10, selectedMesh.geometry.control.front);
           // if(selectedMesh.children[0]){
           //   selectedMesh.children[0].translateZ(-10);
           // }
@@ -3561,9 +3588,11 @@ window.addEventListener("keydown", function(e){
       case 40:  // back
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateZ(5);
+          // moveMesh(selectedMesh, 5, selectedMesh.geometry.control.back);
         }
         else{
           selectedMesh.translateZ(10);
+          // moveMesh(selectedMesh, 10, selectedMesh.geometry.control.back);
           // if(selectedMesh.children[0]){
           //   selectedMesh.children[0].translateZ(10);
           // }
@@ -3572,9 +3601,11 @@ window.addEventListener("keydown", function(e){
       case 65:  // up
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateY(5);
+          // moveMesh(selectedMesh, 5, selectedMesh.geometry.control.up);
         }
         else{
           selectedMesh.translateY(10);
+          // moveMesh(selectedMesh, 10, selectedMesh.geometry.control.up);
           // if(selectedMesh.children[0]){
           //   selectedMesh.children[0].translateY(10);
           // }
@@ -3583,26 +3614,25 @@ window.addEventListener("keydown", function(e){
       case 83:  // down
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateY(-5);
+          // moveMesh(selectedMesh, 5, selectedMesh.geometry.control.down);
         }
         else{
           selectedMesh.translateY(-10);
-          if(selectedMesh.children[0]){
-            selectedMesh.children[0].translateY(-10);
-          }
+          // moveMesh(selectedMesh, 10, selectedMesh.geometry.control.down);
+          // if(selectedMesh.children[0]){
+          //   selectedMesh.children[0].translateY(-10);
+          // }
         }
         break;
       //rotate object
       case 90:  // Z
         selectedMesh.rotateX(Math.PI/2);
-
         break;
       case 88:  // X
         selectedMesh.rotateY(Math.PI/2);
-
         break;
       case 67:  // C
         selectedMesh.rotateZ(Math.PI/2);
-
         break;
       case 189: // 放大縮小
         selectedMesh.geometry.scale(0.5, 0.5, 0.5);
