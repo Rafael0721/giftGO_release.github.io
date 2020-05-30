@@ -176,28 +176,34 @@
     <!lower buttons>
     <div class="lowerButton">
 
-      <div class="dropup importBtn">
-        <label class="fileBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Import 3D</label>
-        <div class="dropdown-menu modeMenu-block-format">
-          <input type="file" id="file" class="inputfile" onchange="readSTL(event)">
-          <label for="file" class="modeMenu-format-all modeMenu-format-left" data-toggle="tooltip" data-placement="top" title="Choose a STL file from your computer">STL</label>
+      <div class="blue-buttons">
+        <div class="dropup importBtn">
+          <label class="fileBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Import 3D</label>
+          <div class="dropdown-menu modeMenu-block-format">
+            <input type="file" id="file" class="inputfile" onchange="readSTL(event)">
+            <label for="file" class="modeMenu-format-all modeMenu-format-left" data-toggle="tooltip" data-placement="top" title="Choose a STL file from your computer">STL</label>
 
-          <div class="modeMenu-dash"> / </div>
-          <!-- <input type="file" id="favFile" class="inputfile" onchange="readFAV(event)"> -->
-          <!-- <label for="favFile" class="modeMenu-format-all modeMenu-format-right" data-toggle="tooltip" data-placement="top" title="Choose a FAV file from your computer">FAV</label> -->
-          <label class="modeMenu-format-all modeMenu-format-right" data-toggle="modal" data-target="#favModal" data-dismiss="modal" data-placement="top" title="Choose a FAV file from your computer">FAV</label>
+            <div class="modeMenu-dash"> / </div>
+            <!-- <input type="file" id="favFile" class="inputfile" onchange="readFAV(event)"> -->
+            <!-- <label for="favFile" class="modeMenu-format-all modeMenu-format-right" data-toggle="tooltip" data-placement="top" title="Choose a FAV file from your computer">FAV</label> -->
+            <label class="modeMenu-format-all modeMenu-format-right" data-toggle="modal" data-target="#favModal" data-dismiss="modal" data-placement="top" title="Choose a FAV file from your computer">FAV</label>
+          </div>
         </div>
+
+        <label class="fileBtn importBtn" data-toggle="modal" data-target="#exampleModal1" data-placement="top" title="Import a STL file and voxelize it">Voxelize STL</label>
+        <!-- <label for="" class="sr-only" .sr-only這個預設class可以隱藏元件，但非display:none; >123</label> -->
       </div>
 
-      <label class="fileBtn importBtn" data-toggle="modal" data-target="#exampleModal1" data-placement="top" title="Import a STL file and voxelize it">Voxelize STL</label>
-      <!-- <label for="" class="sr-only" .sr-only這個預設class可以隱藏元件，但非display:none; >123</label> -->
-
-      <label id="clearPrevious" class="fileBtn clearBtn" data-toggle="tooltip" data-placement="top" title="Clear the previously imported item">CLEAR PREVIOUS</label>
-      <label id="clearSelected" class="fileBtn clearBtn" data-toggle="tooltip" data-placement="top" title="Clear the selected item">CLEAR SELECTED</label>
-      <!-- Modal's button trigger -->
-      <label class="fileBtn clearBtn" data-toggle="modal" data-target="#exampleModal3" data-placement="top" title="Clear all items and restart">RESTART</label>
+      <div class="red-buttons">
+        <label id="clearPrevious" class="fileBtn clearBtn" data-toggle="tooltip" data-placement="top" title="Clear the previously imported item">CLEAR PREVIOUS</label>
+        <label id="clearSelected" class="fileBtn clearBtn" data-toggle="tooltip" data-placement="top" title="Clear the selected item">CLEAR SELECTED</label>
+        <!-- Modal's button trigger -->
+        <label class="fileBtn clearBtn" data-toggle="modal" data-target="#exampleModal3" data-placement="top" title="Clear all items and restart">RESTART</label>
+      </div>
 
       <div class="btn-group dropup mergeBtn">
+        <label id="merge" class="fileBtn mergeBtn" data-toggle="tooltip" data-placement="top" title="Confirm your work and prepare to export">Merge All</label>
+
         <label class="fileBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Export 3D</label>
         <div class="dropdown-menu modeMenu-block-format">
 
@@ -224,7 +230,6 @@
       </form> -->
 
       <!-- <input style="display:none;" type="file" name="file" value=""> -->
-      <label id="merge" class="fileBtn mergeBtn" data-toggle="tooltip" data-placement="top" title="Confirm your work and prepare to export">Merge All</label>
     </div>
 
     <!-- import FAV Modal -->

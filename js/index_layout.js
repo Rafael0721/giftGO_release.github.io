@@ -141,11 +141,22 @@ function timerCount(){
   t = setTimeout(timerCount, 1000);
 }
 
+function resize(){
+  var w = window.innerWidth;
+  renderHeight = window.innerHeight * 0.85
+  webGLRenderer.setPixelRatio(window.devicePixelRatio);
+  webGLRenderer.setSize(w, renderHeight);
+  camera.aspect = w / renderHeight
+  camera.updateProjectionMatrix();
+}
+
+window.addEventListener('resize', resize);
+
 //3d part
 var scene = new THREE.Scene();
 var scene2 = new THREE.Scene();
-var renderHeight = window.innerHeight * 0.8;
-var camera = new THREE.PerspectiveCamera(45, window.innerWidth / renderHeight, 1, 10000);
+var renderHeight = window.innerHeight * 0.85;
+var camera = new THREE.PerspectiveCamera(50, window.innerWidth / renderHeight, 1, 10000);
 var webGLRenderer = new THREE.WebGLRenderer();
 var displayLoader = document.getElementById("loader");
 var status = "complete";
@@ -153,11 +164,12 @@ var status = "complete";
 webGLRenderer.autoClear = false;
 webGLRenderer.setClearColor(0xEEEEEE);
 webGLRenderer.setSize(window.innerWidth, renderHeight);
-camera.position.x = 150;
-camera.position.y = 50;
-camera.position.z = 150;
+camera.position.x = 0;
+camera.position.y = 100;
+camera.position.z = 200;
 camera.lookAt(scene.position);
 var controls = new THREE.OrbitControls( camera, webGLRenderer.domElement );
+controls.keys = {};  // 取消掉原來預設在方向鍵的動作
 controls.enableDamping = true;
 controls.dampingFactor = 0.3;
 controls.enableZoom = true;
@@ -590,6 +602,15 @@ cube.addEventListener("click", function(){
   }
 });
 
+var controlObj = {
+  front: '-Z',
+  back: '+Z',
+  left: '-X',
+  right: '+X',
+  up: '+Y',
+  down: '-Y'
+}
+
 var seven = document.getElementById("seven");
 seven.addEventListener("click", function(){
   if(mergeSwitch){
@@ -608,6 +629,9 @@ seven.addEventListener("click", function(){
       var mat = new THREE.MeshStandardMaterial({color:0xffffff, side: THREE.DoubleSide});
       mesh[ini] = new THREE.Mesh(geometry, mat);
       geometry.name = "seven";
+
+      geometry.control = Object.assign({}, controlObj);
+
       mesh[ini].scale.set(1, 1, 1);
       findThePeak(geometry);
       geometry.translate(0, peakHeight + objectHeight, 0);
@@ -3499,7 +3523,7 @@ window.addEventListener("keydown", function(e){
   if(modalDisplay == "no"){
     switch(e.keyCode){
       //move object
-      case 39:
+      case 39:  // right
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateX(5);
         }
@@ -3512,7 +3536,7 @@ window.addEventListener("keydown", function(e){
         // console.log(hidden[0]);
         // console.log(selectedMesh.children[0]);
         break;
-      case 37:
+      case 37:  // left
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateX(-5);
         }
@@ -3523,7 +3547,7 @@ window.addEventListener("keydown", function(e){
           // }
         }
         break;
-      case 38:
+      case 38:  // front
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateZ(-5);
         }
@@ -3534,7 +3558,7 @@ window.addEventListener("keydown", function(e){
           // }
         }
         break;
-      case 40:
+      case 40:  // back
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateZ(5);
         }
@@ -3545,7 +3569,7 @@ window.addEventListener("keydown", function(e){
           // }
         }
         break;
-      case 65:
+      case 65:  // up
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateY(5);
         }
@@ -3556,7 +3580,7 @@ window.addEventListener("keydown", function(e){
           // }
         }
         break;
-      case 83:
+      case 83:  // down
         if(selectedMesh.geometry.name == "text"){
           selectedMesh.translateY(-5);
         }
@@ -3568,23 +3592,17 @@ window.addEventListener("keydown", function(e){
         }
         break;
       //rotate object
-      case 90:
+      case 90:  // Z
         selectedMesh.rotateX(Math.PI/2);
-        // if(selectedMesh.children[0]){
-        //   selectedMesh.children[0].rotateX(Math.PI/2);
-        // }
+
         break;
-      case 88:
+      case 88:  // X
         selectedMesh.rotateY(Math.PI/2);
-        // if(selectedMesh.children[0]){
-        //   selectedMesh.children[0].rotateY(Math.PI/2);
-        // }
+
         break;
-      case 67:
+      case 67:  // C
         selectedMesh.rotateZ(Math.PI/2);
-        // if(selectedMesh.children[0]){
-        //   selectedMesh.children[0].rotateZ(Math.PI/2);
-        // }
+
         break;
       case 189: // 放大縮小
         selectedMesh.geometry.scale(0.5, 0.5, 0.5);

@@ -31,7 +31,7 @@ html, body{
 .function-container{
   /* position: relative; */
   width: 100%;
-  height: 80vh;
+  height: 85vh;
 }
 
 .titleIcon{
@@ -264,11 +264,14 @@ html, body{
 
 .lowerButton{
   clear: both;
-  width: 90%;
-  height: 20vh;
-  margin: 20px 5% 0 5%;
-  text-align: center;
+  width: 90vw;
+  height: 15vh;
   overflow: visible;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5vw;
 }
 
 .centerBtn{
