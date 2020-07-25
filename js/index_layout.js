@@ -654,6 +654,7 @@ seven.addEventListener("click", function(){
       geometry.name = "seven";
 
       // geometry.control = $.extend(true, {}, controlObj);
+      // var shell = new THREE.Group();  // use a parent object can keep the original direction of moving
 
       mesh[ini].scale.set(1, 1, 1);
       findThePeak(geometry);
